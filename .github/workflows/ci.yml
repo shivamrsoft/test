@@ -1,8 +1,5 @@
 name: Trigger Jenkins Build
-on:
-  pull_request:
-    branches: [master]
-    types: [closed]
+on:[push]
 env:
   JENKINS_HOST: "http://35.232.120.3:8080/"
   JENKINS_JOB: "job/test/"
