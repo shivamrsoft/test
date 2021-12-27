@@ -10,5 +10,5 @@ jobs:
         with:
           url: "http://35.232.120.3:8080/"
           user: "Shivam_purohit"
-          token: ${{ secrets.TOKEN }}
+          token: "11860c05333fedaabe894cab59729c3b19"
           job: "test"
