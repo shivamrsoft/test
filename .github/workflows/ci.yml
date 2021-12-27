@@ -3,7 +3,7 @@ on: [push]
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.4
     steps:
       - name: Trigger Jenkins Job
         uses: appleboy/jenkins-action@0.0.1
