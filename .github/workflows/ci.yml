@@ -1,18 +1,11 @@
 name: Trigger Jenkins Build
-on: [push]
-env:
-  JENKINS_HOST: "http://35.232.120.3:8080/"
-  JENKINS_JOB: "job/test/"
+on: push
 jobs:
-  trigger:
-    name: Triggering Jenkins Build
-    runs-on: ubuntu-18.04
+  jenkinsfile-runner-prepackaged:
+    runs-on: ubuntu-latest
     steps:
-      - name: Triggering Jenkins Build
-        uses: GoldenspearLLC/build-jenkins-job@master
-        with:
-          jenkins-url: ${{ env.JENKINS_HOST }}
-          user: ${{ secrets.JENKINS_USER }}
-          jenkins-token: ${{ secrets.ActionsToken }}
-          job-path: ${{ env.JENKINS_JOB }}
-          job-params: "{'FRESH_BUILD':'True', 'BUILD_BRANCH':'main', 'DEPLOY_DEV':'True', 'DEPLOY_QA':'False, 'DEPLOY_STAGING':'False, 'DEPLOY_PRODUCTION':'False'}"
+      - uses: actions/checkout@master
+      - name: jenkinsfile-runner-prepackaged
+        uses: jenkinsci/jenkinsfile-runner-github-actions/jenkinsfile-runner-prepackaged@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
