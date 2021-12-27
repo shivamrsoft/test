@@ -13,6 +13,6 @@ jobs:
         with:
           jenkins-url: ${{ env.JENKINS_HOST }}
           user: ${{ secrets.JENKINS_USER }}
-          jenkins-token: ${{ secrets.TOKEN }}
+          jenkins-token: ${{ secrets.ActionsToken }}
           job-path: ${{ env.JENKINS_JOB }}
           job-params: "{'FRESH_BUILD':'True', 'BUILD_BRANCH':'main', 'DEPLOY_DEV':'True', 'DEPLOY_QA':'False, 'DEPLOY_STAGING':'False, 'DEPLOY_PRODUCTION':'False'}"
