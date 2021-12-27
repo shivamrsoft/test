@@ -5,8 +5,8 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-     - name: Trigger Jenkins Job
-       uses: appleboy/jenkins-action@0.0.1
+      - name: Trigger Jenkins Job
+        uses: appleboy/jenkins-action@0.0.1
         with:
           url: "http://35.232.120.3:8080/"
           user: "shivam_purohit"
