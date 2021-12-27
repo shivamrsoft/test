@@ -15,3 +15,4 @@ jobs:
           user: ${{ secrets.JENKINS_USER }}
           jenkins-token: ${{ secrets.TOKEN }}
           job-path: ${{ env.JENKINS_JOB }}
+          job-params: "{'FRESH_BUILD':'True', 'BUILD_BRANCH':'main', 'DEPLOY_DEV':'True', 'DEPLOY_QA':'False, 'DEPLOY_STAGING':'False, 'DEPLOY_PRODUCTION':'False'}"
