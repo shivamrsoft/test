@@ -6,7 +6,7 @@ env:
 jobs:
   trigger:
     name: Triggering Jenkins Build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - name: Triggering Jenkins Build
         uses: GoldenspearLLC/build-jenkins-job@master
